@@ -21,6 +21,6 @@ app.use("/funcionario", funcionarioRoute);
 
 database.sequelize.sync().then(() => {
   app.listen(PORT, () => {
-    console.log("Servidor está rodando na porta 8080");
+    console.log("Servidor está rodando na porta 8081");
   });
 });
