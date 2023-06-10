@@ -61,15 +61,11 @@ const HomePage = () => {
     }
 
     axios
-      .post(
-        "http://sondaengenhariamds.sa-east-1.elasticbeanstalk.com/register",
-        data,
-        {
-          headers: {
-            Authorization: "Bearer " + accessToken,
-          },
-        }
-      )
+      .post("https://nr-control.vercel.app/register", data, {
+        headers: {
+          Authorization: "Bearer " + accessToken,
+        },
+      })
       .then((response) => {
         console.log("IT WORKED");
       })

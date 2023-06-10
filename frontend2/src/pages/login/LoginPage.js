@@ -19,10 +19,7 @@ function LoginPage() {
     e.preventDefault();
     const data = { email: email, password: password };
     axios
-      .post(
-        "http://sondaengenhariamds.sa-east-1.elasticbeanstalk.com/auth/login",
-        data
-      )
+      .post("https://nr-control.vercel.app/auth/login", data)
       .then((response) => {
         if (response.data.error) {
           alert(response.data.error);

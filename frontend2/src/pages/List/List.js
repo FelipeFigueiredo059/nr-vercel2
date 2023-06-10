@@ -16,11 +16,9 @@ function List() {
 
   const [listOfEmployees, setListOfEmployees] = useState([]);
   useEffect(() => {
-    axios
-      .get("http://sondaengenhariamds.sa-east-1.elasticbeanstalk.com/register")
-      .then((response) => {
-        setListOfEmployees(response.data);
-      });
+    axios.get("https://nr-control.vercel.app/register").then((response) => {
+      setListOfEmployees(response.data);
+    });
   }, []);
 
   return (
